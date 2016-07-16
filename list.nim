@@ -1,6 +1,7 @@
 
-proc last*(l: seq[string]): string=
-  result=l[high(l)]
+proc last*[T](a: openarray[T]): seq[T]=
+  result = @[]
+  result.add(a[a.high])
 
 proc lastButOne*(l: seq[string]): seq[string]=
   let length=l.len
